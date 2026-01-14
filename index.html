@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finova Data Viewer</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <header>
+        <h1>FINOVA DATA VIEWER</h1>
+    </header>
+    <main>
+        <div class="search">
+            <input id="symbolInput" placeholder="Enter crypto (bitcoin) or stock (AAPL)" >
+            <button id="fetchBtn">Search</button>
+        </div>
+        <div class="results">
+            <div class="stock">
+                <h2>Stock Information</h2>
+                <p id="stocktext">Waiting for data....</p>
+            </div>
+            <div class="crypto">
+                <h2>Crypto Information</h2>
+                <p id="priceText">Waiting for data....</p>
+            </div>
+        </div>
+     <canvas id="priceChart" width="400" height="200"></canvas>
+    </main>
+ 
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <script type="module" src="/src/main.js"></script>  
+
+</body>
+
+</html>
