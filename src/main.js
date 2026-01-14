@@ -29,6 +29,8 @@ const priceChart = new Chart(ctx, {
     }
 });
 
+const stockApiKey = "3af591a9bf2f45f596e2c4b0195b3e53";
+
 button.addEventListener("click", async () => {
     const symbol = input.value.trim();
     if (!symbol) {
@@ -44,13 +46,12 @@ button.addEventListener("click", async () => {
     stockText.style.color = "black";
 
     try {
-        const cryptoRes = await fetch( `https://api.coingecko.com/api/v3/coins/${symbol.toLowerCase()}/market_chart?vs_currency=usd&days=30`);
+        const cryptoRes = await fetch(`https://api.coingecko.com/api/v3/coins/${symbol.toLowerCase()}/market_chart?vs_currency=usd&days=30`);
         const cryptoData = await cryptoRes.json();
 
         if (cryptoData.prices) {
             const prices = cryptoData.prices;
 
-        
             const labels = prices.map(item => {
                 const date = new Date(item[0]);
                 const year = date.getFullYear();
@@ -65,18 +66,18 @@ button.addEventListener("click", async () => {
             priceChart.data.datasets[0].data = priceValues;
             priceChart.update();
 
-        
-            priceText.textContent = `Current ${symbol} price: $${priceValues[priceValues.length - 1].toFixed(2)}`;
-            priceText.style.color = "green";
-            stockText.textContent = "";
+            const currentPrice = priceValues[priceValues.length - 1];
+            const firstPrice = priceValues[0];
 
+            priceText.textContent = `Current ${symbol} price: $${currentPrice.toFixed(2)}`;
+            priceText.style.color = currentPrice > firstPrice ? "#038203ff" : currentPrice < firstPrice ? "red" : "black";
+            stockText.textContent = "";
         } else {
-            const stockApiKey = "demo"; 
             const stockRes = await fetch(`https://api.twelvedata.com/time_series?symbol=${symbol.toUpperCase()}&interval=1day&outputsize=30&apikey=${stockApiKey}`);
             const stockData = await stockRes.json();
-            
+
             if (stockData.values) {
-                const values = stockData.values.reverse(); 
+                const values = stockData.values.reverse();
 
                 const labels = values.map(item => {
                     const date = new Date(item.datetime);
@@ -92,8 +93,11 @@ button.addEventListener("click", async () => {
                 priceChart.data.datasets[0].data = priceValues;
                 priceChart.update();
 
-                stockText.textContent = `Current ${symbol.toUpperCase()} price: $${priceValues[priceValues.length - 1].toFixed(2)}`;
-                stockText.style.color = "orange";
+                const currentPrice = priceValues[priceValues.length - 1];
+                const firstPrice = priceValues[0];
+
+                stockText.textContent = `Current ${symbol.toUpperCase()} price: $${currentPrice.toFixed(2)}`;
+                stockText.style.color = currentPrice > firstPrice ? "green" : currentPrice < firstPrice ? "red" : "black";
                 priceText.textContent = "";
             } else {
                 priceText.textContent = "";
@@ -109,4 +113,3 @@ button.addEventListener("click", async () => {
         stockText.style.color = "red";
     }
 });
-  

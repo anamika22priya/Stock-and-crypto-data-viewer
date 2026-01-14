@@ -15,7 +15,7 @@ main{
 }
 .search{
     text-align: center;
-    margin-bottom: 85px;
+    margin-bottom: 40px;
 }
 .search input{
     padding: 10px;
@@ -38,18 +38,20 @@ main{
 }
 .results{
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    flex-wrap: wrap; 
+    gap: 9px;
+    justify-content: center; 
+    margin-bottom: 40px; 
 }
 
 .stock, .crypto{
-    background-color:rgb(136, 3, 146);
+    background-color:rgb(225, 198, 226);
     text-align: center;
-    color:azure;
+    color:rgb(4, 35, 35);
     padding: 20px;
     width: 40%;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px #d60fb8;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #f888e8;
 
 
 }
