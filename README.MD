@@ -137,6 +137,7 @@ to the merchant’s bank account.
   * Backend : Payment Gateway (payment creation & verification APIs)
   * Gateway : Bank / NPCI / Card Network (authorization APIs).
 ## DIAGRAM: 
+![Payment Gateway Architecture](images/PAYMENT_FLOWCHART.png)
 ## SECURITY CONCEPTS: 
 ### Why payment data must be secured? 
  * Payment data includes card numbers, CVV, bank details, and UPI credentials
