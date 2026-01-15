@@ -29,9 +29,9 @@ Charts and texts update dynamically without refreshing the page.
 
 # SCREENSHOTS: 
 1. UI: 
-![UI Screenshot](images\FINOVA_DATA_VIEWER_UI.jpeg)
+![UI Screenshot](images/FINOVA_DATA_VIEWER_UI.jpeg)
 2. CHART OUTPUT: 
-![CHART OUTPUT](images\CHART OUTPUT.jpeg)
+![CHART OUTPUT](images/CHART OUTPUT.jpeg)
 
 ### 1.SCREENSHOT OF UI IN BROWSER  
 ![Screenshot of UI](images/sc_of_UI.png)
