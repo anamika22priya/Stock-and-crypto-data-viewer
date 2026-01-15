@@ -31,7 +31,12 @@ Charts and texts update dynamically without refreshing the page.
 1. UI: 
 ![UI Screenshot](images/FINOVA_DATA_VIEWER_UI.jpeg)
 2. CHART OUTPUT: 
-![CHART OUTPUT](images/CHART OUTPUT.jpeg)
+![CHART OUTPUT](images/CHART_OUTPUT.jpeg)
+3. GIT COMMANDS USED: 
+![GIT INITIALISATION](images/GIT_INITIALIZE.png)
+![GITHUB INITIALISATION](images/GITHUB_SETUP.png)
+![GIT COMMIT](images/GIT_COMMMIT_SC.png)
+
 
 ### 1.SCREENSHOT OF UI IN BROWSER  
 ![Screenshot of UI](images/sc_of_UI.png)
