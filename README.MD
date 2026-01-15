@@ -133,9 +133,9 @@ to the merchant’s bank account.
 ### The role of APIs in payment processing: 
  * APIs enable communication between different systems.
  * In a payment flow:
-  * Frontend → Backend (order request API)
-  * Backend → Payment Gateway (payment creation & verification APIs)
-  * Gateway → Bank / NPCI / Card Network (authorization APIs).
+  * Frontend: Backend (order request API)
+  * Backend : Payment Gateway (payment creation & verification APIs)
+  * Gateway : Bank / NPCI / Card Network (authorization APIs).
 ## DIAGRAM: 
 ## SECURITY CONCEPTS: 
 ### Why payment data must be secured? 
