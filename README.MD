@@ -4,6 +4,7 @@ DOM (Document Object Model) manipulation refers to using JavaScript to access an
 * JavaScript selects HTML elements using getElementById() or querySelector().
 * When the user searches for a stock or crypto symbol, JavaScript updates the text, values, and styles of elements on the webpage.
 * The page does not reload; only the required parts of the UI change.
+
 <u>Example actions in the project:</u>
 * Reading user input from the search box
 * Updating price text and percentage change
