@@ -12,9 +12,9 @@ DOM (Document Object Model) manipulation refers to using JavaScript to access an
 * Updating charts dynamically
 
 # HOW DATA FLOWS IN THE PROJECT?
-1. User Input:
+1. User Input: 
 The user enters a stock or crypto symbol and clicks the search button. 
-2. API Request:
+2. API Request: 
 JavaScript captures the input value. 
 A fetch()request is sent to a market data API.
 3. API Response:
